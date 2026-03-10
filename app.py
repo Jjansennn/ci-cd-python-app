@@ -1,14 +1,12 @@
-# Fitur Aplikasi:
-# input angka
-# output:
-# Genap / Ganjil
+from flask import Flask
 
-def check_number(n):
-    if n % 2 == 0:
-        return "Genap"
-    else:
-        return "Ganjil"
+app = Flask(__name__)
+
+
+@app.route("/")
+def home():
+    return "Hello, World! And Bye!"
 
 
 if __name__ == "__main__":
-    print(check_number(4))
+    app.run()
